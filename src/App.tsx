@@ -1,6 +1,7 @@
 import About from "./components/About"
 import Hero from "./components/Hero"
-import Projects from "./components/Skills"
+import Skills from "./components/Skills"
+import Projects from "./components/Project"
 
 
 
@@ -9,6 +10,7 @@ function App() {
     <>
     <Hero/>
     <About/>
+    <Skills/>
     <Projects/>
     </>
   )

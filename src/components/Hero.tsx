@@ -7,7 +7,6 @@ import {
     User,
     Hammer,
     Code2,
-    Layers,
     Phone,
     ScrollText,
   } from "lucide-react"
@@ -55,15 +54,7 @@ export default function Hero() {
 
   <DockIcon>
     <a href="#projects" title="Projects">
-      <Layers className="w-6 h-6 text-purple-100" />
-    </a>
-  </DockIcon>
-
-
-
-  <DockIcon>
-    <a href="#techstack" title="Tech Stack">
-      <Code2 className="w-6 h-6 text-yellow-100" />
+      <Code2 className="w-6 h-6 text-purple-100" />
     </a>
   </DockIcon>
 
