@@ -1,5 +1,9 @@
 
 
+import { TextHoverEffectDemo } from "@/ui-comp/TextHover";
+
+
+
 export default function About() {
     return (
       <section id="about" className="w-full min-h-screen flex items-center justify-center bg-black text-white px-6 py-20">
@@ -11,14 +15,14 @@ export default function About() {
             scalable web applications from backend logic,building robust APIs to frontend flair.
             <br></br>
             <br></br>
-            Crafting digital experiences that are both
-            beautiful and functional.
-          </p>
-         
-          <p className="mt-4 text-md md:text-lg text-gray-400">
+            <span className="mt-4 text-md md:text-lg text-gray-400">
             Tech I enjoy working with: React, Node.js, Express, MongoDB and Tailwind.
             also i would love explore 
+          </span>
           </p>
+         
+         <TextHoverEffectDemo/>
+    
         </div>
       </section>
     );

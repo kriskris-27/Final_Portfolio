@@ -1,5 +1,5 @@
 import About from "./components/About"
-import { FlipWordsDemo } from "./components/Flip"
+import { FlipWordsDemo } from "./ui-comp/Flip"
 import Hero from "./components/Hero"
 
 
