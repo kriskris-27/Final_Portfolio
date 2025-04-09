@@ -5,6 +5,7 @@ import img3 from "../assets/image4.png"
 import img4 from "../assets/image5.png"
 // Placeholder TypingEffect component.
 // Replace this with your actual TypingEffect component.
+import Spline from '@splinetool/react-spline';
 
 
 const projects = [
@@ -56,7 +57,7 @@ const Projects = () => {
     >
       {/* Title */}
       <h2 className="text-2xl py-8 ml-25 text-white md:text-[8rem] ">Projects</h2>
-
+      
       {/* Projects List */}
       <div className="flex flex-col sm:flex-row">
         
@@ -102,7 +103,9 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+        
       </div>
+      <Spline scene="https://prod.spline.design/JeCjdeCJ3j2ZTCHN/scene.splinecode" />
     </section>
   );
 };

@@ -8,7 +8,7 @@ import {
     Hammer,
     Code2,
     Phone,
-    ScrollText,
+    
   } from "lucide-react"
 
 export default function Hero() {
@@ -55,12 +55,6 @@ export default function Hero() {
   <DockIcon>
     <a href="#projects" title="Projects">
       <Code2 className="w-6 h-6 text-purple-100" />
-    </a>
-  </DockIcon>
-
-  <DockIcon>
-    <a href="#resume" title="Resume">
-      <ScrollText className="w-6 h-6 text-indigo-100" />
     </a>
   </DockIcon>
 
