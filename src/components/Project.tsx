@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
+import { lazy, Suspense } from "react";
+
 import img1 from "../assets/image.webp";
 import img2 from "../assets/image2.webp";
 import img3 from "../assets/image4.webp";
 import img4 from "../assets/image5.webp";
-import Spline from "@splinetool/react-spline";
+
+// Lazy load Spline
+const LazySpline = lazy(() => import("@splinetool/react-spline"));
 
 // Project Data
 const projects = [
@@ -41,7 +45,6 @@ const projects = [
   },
 ];
 
-// Letter Animation
 const letterAnimation = {
   hidden: { opacity: 0, y: -5 },
   visible: (i: number) => ({
@@ -55,7 +58,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 px-4 text-white min-h-screen">
       {/* Title */}
-      <h2 className="text-2xl py-8 text-white md:text-[8rem] font-bold">Projects</h2>
+      <h2 className="text-2xl py-8 text-white md:text-[8rem] ">Projects</h2>
 
       {/* Project List */}
       <div className="flex flex-col items-center gap-20">
@@ -118,9 +121,15 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Spline Embed */}
+      {/* Lazy Loaded Spline */}
       <div className="mt-24">
-        <Spline scene="https://prod.spline.design/JeCjdeCJ3j2ZTCHN/scene.splinecode" />
+        <Suspense
+          fallback={
+            <div className="w-full h-96 bg-gray-900 rounded-xl animate-pulse" />
+          }
+        >
+          <LazySpline scene="https://prod.spline.design/JeCjdeCJ3j2ZTCHN/scene.splinecode" />
+        </Suspense>
       </div>
     </section>
   );
