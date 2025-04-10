@@ -6,36 +6,39 @@ import img4 from "../assets/image5.webp";
 
 // Project Data
 const projects = [
-  {
-    title: "Spitfire",
-    image: img1,
-    preview: "https://spitfire-tau.vercel.app/",
-    descp: "Glow up your gains—track, log, and flex on 'em",
-    techstack:
-      "Tech Stack: React · Node.js · Express · MongoDB | Key Tools: MUI, Redux Toolkit, JWT, Styled Components",
-  },
-  {
-    title: "Project 2",
-    image: img2,
-    preview: "#",
-    descp: "Description for project 2",
-    techstack: "Tech stack for project 2",
-  },
-  {
-    title: "Project 3",
-    image: img3,
-    preview: "#",
-    descp: "Description for project 3",
-    techstack: "Tech stack for project 3",
-  },
-  {
-    title: "Project 4",
-    image: img4,
-    preview: "#",
-    descp: "Description for project 4",
-    techstack: "Tech stack for project 4",
-  },
-];
+    {
+      title: "Starlietti – EV Charger Finder",
+      image: img2,
+      preview: "https://starlietti-ui.vercel.app/",
+      descp: "Find the closest EV charging spots in seconds",
+      techstack:
+        "Tech Stack: React · Node.js · Express · MongoDB · Vite | Key Tools: Leaflet, JWT, Haversine, Axios",
+    },
+    {
+      title: "Bill Vision - A Retail POS",
+      image: img4,
+      preview: "https://software-gold.vercel.app/",
+      descp: "A smart and user-friendly Retail POS System built for small businesses.",
+      techstack:
+        "Tech Stack: React · Node.js · Express · MongoDB · TypeScript | Key Tools: React Query, JWT, Tailwind, PDFKit",
+    },
+    {
+      title: "Spitfire – Fitness Tracker",
+      image: img1,
+      preview: "https://spitfire-tau.vercel.app/",
+      descp: "Glow up your gains—track, log, and flex on ‘em",
+      techstack:
+        "Tech Stack: React · Node.js · Express · MongoDB | Key Tools: MUI, Redux Toolkit, JWT, Styled Components",
+    },
+    {
+      title: "Tribe - Cafe (Freelance)",
+      image: img3,
+      preview: "https://tribe-by-v.vercel.app/",
+      descp: "A vibrant fusion drink brand website with a tribal aesthetic.",
+      techstack:
+        "Tech Stack: React · Three.js · Tailwind CSS · Vite · JavaScript | Tools: R3F, Framer Motion, GSAP, @shadcn/ui",
+    },
+  ];
 
 export default function Projects() {
   return (
