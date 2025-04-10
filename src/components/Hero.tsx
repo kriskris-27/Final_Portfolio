@@ -6,7 +6,6 @@ import {
   Hammer,
   Code2,
   Phone,
-  ScrollText,
   ArrowDown,
   Github,
   Linkedin,
@@ -141,11 +140,7 @@ export default function Hero() {
               <Code2 className="w-6 h-6 text-white" />
             </a>
           </MemoizedDockIcon>
-          <MemoizedDockIcon>
-            <a href="#resume" title="Resume">
-              <ScrollText className="w-6 h-6 text-white" />
-            </a>
-          </MemoizedDockIcon>
+          
           <MemoizedDockIcon>
             <a href="#contact" title="Contact">
               <Phone className="w-6 h-6 text-white" />
