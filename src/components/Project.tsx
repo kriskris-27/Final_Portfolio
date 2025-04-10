@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import img1 from "../assets/image.png"
-import img2 from "../assets/image2.png"
-import img3 from "../assets/image4.png"
-import img4 from "../assets/image5.png"
+import img1 from "../assets/image.webp"
+import img2 from "../assets/image2.webp"
+import img3 from "../assets/image4.webp"
+import img4 from "../assets/image5.webp"
 // Placeholder TypingEffect component.
 // Replace this with your actual TypingEffect component.
 import Spline from '@splinetool/react-spline';
