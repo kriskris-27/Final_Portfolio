@@ -1,111 +1,127 @@
 import { motion } from "framer-motion";
-import img1 from "../assets/image.webp"
-import img2 from "../assets/image2.webp"
-import img3 from "../assets/image4.webp"
-import img4 from "../assets/image5.webp"
-// Placeholder TypingEffect component.
-// Replace this with your actual TypingEffect component.
-import Spline from '@splinetool/react-spline';
+import img1 from "../assets/image.webp";
+import img2 from "../assets/image2.webp";
+import img3 from "../assets/image4.webp";
+import img4 from "../assets/image5.webp";
+import Spline from "@splinetool/react-spline";
 
-
+// Project Data
 const projects = [
   {
     title: "Starlietti – EV Charger Finder",
     image: img2,
     preview: "https://starlietti-ui.vercel.app/",
     descp: "Find the closest EV charging spots in seconds",
-    techstack: "Tech Stack: React · Node.js · Express · MongoDB · Vite | Key Tools: Leaflet, JWT, Haversine, Axios",
+    techstack:
+      "Tech Stack: React · Node.js · Express · MongoDB · Vite | Key Tools: Leaflet, JWT, Haversine, Axios",
   },
   {
     title: "Bill Vision - A Retail POS",
-    image:img4,
+    image: img4,
     preview: "https://software-gold.vercel.app/",
     descp: "A smart and user-friendly Retail POS System built for small businesses.",
-    techstack: "Tech Stack: React · Node.js · Express · MongoDB · TypeScript | Key Tools: React Query, JWT, Tailwind, PDFKit",
+    techstack:
+      "Tech Stack: React · Node.js · Express · MongoDB · TypeScript | Key Tools: React Query, JWT, Tailwind, PDFKit",
   },
   {
     title: "Spitfire – Fitness Tracker",
-    image:img1,
+    image: img1,
     preview: "https://spitfire-tau.vercel.app/",
     descp: "Glow up your gains—track, log, and flex on ‘em",
-    techstack: "Tech Stack: React · Node.js · Express · MongoDB | Key Tools: MUI, Redux Toolkit, JWT, Styled Components",
+    techstack:
+      "Tech Stack: React · Node.js · Express · MongoDB | Key Tools: MUI, Redux Toolkit, JWT, Styled Components",
   },
   {
     title: "Tribe - Cafe (Freelance)",
     image: img3,
     preview: "https://tribe-by-v.vercel.app/",
     descp: "A vibrant fusion drink brand website with a tribal aesthetic.",
-    techstack: "Tech Stack: React · Three.js · Tailwind CSS · Vite · JavaScript | Tools: R3F, Framer Motion, GSAP, @shadcn/ui",
+    techstack:
+      "Tech Stack: React · Three.js · Tailwind CSS · Vite · JavaScript | Tools: R3F, Framer Motion, GSAP, @shadcn/ui",
   },
 ];
 
-// Letter-by-letter animation for project descriptions.
+// Letter Animation
 const letterAnimation = {
   hidden: { opacity: 0, y: -5 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.1, duration: 0.1 },
+    transition: { delay: i * 0.03, duration: 0.08 },
   }),
 };
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="py-16 px-4 text-white min-h-screen"
-    >
+    <section id="projects" className="py-16 px-4 text-white min-h-screen">
       {/* Title */}
-      <h2 className="text-2xl py-8 ml-25 text-white md:text-[8rem] ">Projects</h2>
-      
-      {/* Projects List */}
-      <div className="flex flex-col sm:flex-row">
-        
-        <div className="flex flex-col items-start gap-16 px-10 sm:pl-20 md:pl-30">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col items-start md:flex-row md:items-center gap-8 w-full max-w-3xl"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              {/* Clickable Image */}
-              <div className="w-full sm:w-80 h-40 sm:h-48 flex-shrink-0">
-                <a href={project.preview} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-xl shadow-lg shadow-gray-500 hover:shadow-white transition duration-300"
-                  />
-                </a>
-              </div>
+      <h2 className="text-2xl py-8 text-white md:text-[8rem] font-bold">Projects</h2>
 
-              {/* Project Title & Description */}
-              <div className="flex flex-col justify-center text-left">
-                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                <motion.p className="text-gray-300 text-lg leading-relaxed mb-2">
-                  {project.descp.split("").map((char, i) => (
-                    <motion.span key={i} custom={i} variants={letterAnimation} initial="hidden" animate="visible">
-                      {char}
-                    </motion.span>
-                  ))}
-                </motion.p>
-                <motion.p className="text-white text-md leading-relaxed">
-                  {project.techstack.split("").map((char, i) => (
-                    <motion.span key={i} custom={i} variants={letterAnimation} initial="hidden" animate="visible">
-                      {char}
-                    </motion.span>
-                  ))}
-                </motion.p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        
+      {/* Project List */}
+      <div className="flex flex-col items-center gap-20">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.title}
+            className="flex flex-col md:flex-row md:items-center gap-8 max-w-5xl w-full px-4 md:px-0"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {/* Image */}
+            <div className="w-full md:w-80 h-48 flex-shrink-0 overflow-hidden rounded-xl shadow-lg shadow-gray-500 hover:shadow-white transition duration-300 transform hover:scale-105">
+              <a href={project.preview} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </a>
+            </div>
+
+            {/* Text */}
+            <div className="flex flex-col justify-center text-left gap-2">
+              <h3 className="text-2xl font-semibold">{project.title}</h3>
+
+              <motion.p className="text-gray-300 text-lg leading-relaxed mb-1">
+                {project.descp.split("").map((char, i) => (
+                  <motion.span
+                    key={i}
+                    custom={i}
+                    variants={letterAnimation}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.p>
+
+              <motion.p className="text-white text-sm leading-relaxed">
+                {project.techstack.split("").map((char, i) => (
+                  <motion.span
+                    key={i}
+                    custom={i}
+                    variants={letterAnimation}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.p>
+            </div>
+          </motion.div>
+        ))}
       </div>
-      <Spline scene="https://prod.spline.design/JeCjdeCJ3j2ZTCHN/scene.splinecode" />
+
+      {/* Spline Embed */}
+      <div className="mt-24">
+        <Spline scene="https://prod.spline.design/JeCjdeCJ3j2ZTCHN/scene.splinecode" />
+      </div>
     </section>
   );
 };
