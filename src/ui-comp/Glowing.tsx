@@ -109,4 +109,4 @@ const GridItem = ({ area, icon, title, spann, description }: GridItemProps) => {
       </div>
     </li>
   )
-}
+} 

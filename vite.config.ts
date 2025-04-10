@@ -4,6 +4,7 @@ import path from "path"
 import tailwindcss from "@tailwindcss/vite"
 import { splitVendorChunkPlugin } from 'vite'
 import { compression } from 'vite-plugin-compression2'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -19,6 +20,12 @@ export default defineConfig({
             algorithm: 'brotliCompress',
             exclude: [/\.(br)$/, /\.(gz)$/],
         }),
+        visualizer({
+            filename: 'dist/stats.html',
+            open: true,
+            gzipSize: true,
+            brotliSize: true,
+        }),
     ],
     resolve: {
         alias: {
@@ -28,10 +35,19 @@ export default defineConfig({
     build: {
         rollupOptions: {
             output: {
-                manualChunks: {
-                    'react-vendor': ['react', 'react-dom'],
-                    'spline-vendor': ['@splinetool/react-spline'],
-                    'motion-vendor': ['framer-motion'],
+                manualChunks: (id) => {
+                    if (id.includes('node_modules')) {
+                        if (id.includes('react') || id.includes('react-dom')) {
+                            return 'react-vendor'
+                        }
+                        if (id.includes('framer-motion')) {
+                            return 'motion-vendor'
+                        }
+                        if (id.includes('lucide-react')) {
+                            return 'icons-vendor'
+                        }
+                        return 'vendor'
+                    }
                 },
             },
         },
@@ -41,7 +57,17 @@ export default defineConfig({
             compress: {
                 drop_console: true,
                 drop_debugger: true,
+                pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+            },
+            format: {
+                comments: false,
             },
         },
+        cssCodeSplit: true,
+        cssMinify: true,
+        sourcemap: false,
+    },
+    optimizeDeps: {
+        include: ['react', 'react-dom'],
     },
 })
