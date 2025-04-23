@@ -17,7 +17,7 @@ const projects = [
     {
       title: "Bill Vision - A Retail POS",
       image: img4,
-      preview: "https://software-gold.vercel.app/",
+      preview: "https://software-sandy.vercel.app/",
       descp: "A smart and user-friendly Retail POS System built for small businesses.",
       techstack:
         "Tech Stack: React · Node.js · Express · MongoDB · TypeScript | Key Tools: React Query, JWT, Tailwind, PDFKit",
