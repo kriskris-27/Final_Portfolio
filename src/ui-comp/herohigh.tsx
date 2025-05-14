@@ -26,9 +26,7 @@ export function HeroHighlightDemo() {
         }}
         className="text-xl md:text-2xl lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-2xl leading-relaxed lg:leading-snug text-center mx-auto"
       >
-        <Highlight className="text-black dark:text-white">
-          Authentic
-        </Highlight>
+        
       </motion.h1>
     </HeroHighlight>
   );
