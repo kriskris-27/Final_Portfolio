@@ -1,6 +1,5 @@
 import React from "react";
-import DecayCard from './ui/Decay';
-import MyImage from "../assets/kris.jpg";
+
 
 const Contact = () => {
   return (
@@ -15,9 +14,7 @@ const Contact = () => {
         </p>
            
 
-<DecayCard width={200} height={300} image={MyImage}>
-  <br/>KRIS
-</DecayCard>
+
         {/* Additional Contact Links */}
         <div className="flex flex-wrap items-center gap-4 my-7">
           <a
