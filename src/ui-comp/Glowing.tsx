@@ -46,10 +46,10 @@ export default function GlowingEffectDemoSecond() {
       <GridItem
         area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
         icon={<Search className="h-4 w-4 text-white dark:text-neutral-400" />}
-        spann={["time", "leadership", "communication", "problem_solving"]
+        spann={["time-management", "leadership", "communication", "problem_solving"]
         }
         title="Growth & Soft Skills"
-        description="Practiced time management, leadership, and problem-solving through multiple projects, freelancing, and iterative development."
+        description="Practicing time management, leadership, and problem-solving through multiple projects, freelancing, and iterative development to become my best self day by day."
       />
       
     </ul>
