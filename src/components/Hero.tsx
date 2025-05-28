@@ -26,18 +26,19 @@ export default function Hero() {
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="max-w-4xl mx-auto">
+            <div className="w-screen h-screen ">
+  <Spline 
+    scene="https://prod.spline.design/T9EAObpUV5XWRE-b/scene.splinecode" 
+    className="w-full h-full" 
+  />
+</div>
             {/* <h1
               className="text-4xl md:text-6xl text-white drop-shadow-lg pb-6"
              
             >
               Hey, I'm <span className="text-white">Kris</span>
             </h1> */}
-            <div className="w-screen h-screen md:w-auto md:h-auto">
-        <Spline 
-          scene="https://prod.spline.design/T9EAObpUV5XWRE-b/scene.splinecode" 
-          style={{ width: "100%", height: "100%" }}
-        />
-      </div>
+            
             {/* <h2
               className="text-xl md:text-2xl text-gray-300 mb-8"
               data-aos="fade-down"
@@ -118,7 +119,13 @@ export default function Hero() {
           <ArrowDown className="w-6 h-6 text-white" />
         </div> */}
       </section>
-
+<div className="fixed right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center pr-2 space-y-1 ">
+        { "NWOD LLORCS".split("").map((char, index) => (
+          <span key={index} className="transform rotate-270 text-white text-xs font-bold md:text-md xl:text-xl">
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))}
+      </div>
       {/* Floating Navigation Dock */}
       <div
         className="fixed bottom-5 right-5 px-1 py-1 font-semibold rounded-xl hover:scale-105 transition-all shadow-lg z-50"
