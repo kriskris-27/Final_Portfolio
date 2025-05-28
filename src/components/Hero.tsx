@@ -83,7 +83,7 @@ export default function Hero() {
               data-aos-delay="600"
             >
               <a
-                href="https://github.com"
+                href="https://github.com/kriskris-27"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition-colors text-white"
