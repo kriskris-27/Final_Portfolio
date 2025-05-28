@@ -1,4 +1,4 @@
-// import Spline from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline";
 import { Dock, DockIcon } from "../components/magicui/dock";
 import {
   Home,
@@ -6,10 +6,10 @@ import {
   Hammer,
   Code2,
   Phone,
-  ArrowDown,
-  Github,
-  Linkedin,
-  Instagram,
+//   ArrowDown,
+//   Github,
+//   Linkedin,
+//   Instagram,
 } from "lucide-react";
 import { memo } from "react";
 
@@ -26,30 +26,36 @@ export default function Hero() {
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="max-w-4xl mx-auto">
-            <h1
+            {/* <h1
               className="text-4xl md:text-6xl text-white drop-shadow-lg pb-6"
              
             >
               Hey, I'm <span className="text-white">Kris</span>
-            </h1>
-            <h2
+            </h1> */}
+            <div className="w-screen h-screen md:w-auto md:h-auto">
+        <Spline 
+          scene="https://prod.spline.design/T9EAObpUV5XWRE-b/scene.splinecode" 
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
+            {/* <h2
               className="text-xl md:text-2xl text-gray-300 mb-8"
               data-aos="fade-down"
               data-aos-delay="300"
             >
               Full Stack Developer
-            </h2>
-            <p
+            </h2> */}
+            {/* <p
               className="text-md md:text-lg max-w-xl mx-auto text-gray-300 mb-12"
               data-aos="fade-up"
               data-aos-delay="400"
             >
               I create immersive web experiences that blend robust backend
               solutions with engaging and modern user interfaces.
-            </p>
+            </p> */}
 
             {/* CTA Buttons */}
-            <div
+            {/* <div
               className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
               data-aos="fade-up"
               data-aos-delay="500"
@@ -67,10 +73,10 @@ export default function Hero() {
               >
                 Get In Touch
               </a>
-            </div>
+            </div> */}
 
             {/* Social Links */}
-            <div
+            {/* <div
               className="flex justify-center gap-6"
               data-aos="fade-up"
               data-aos-delay="600"
@@ -99,18 +105,18 @@ export default function Hero() {
               >
                 <Instagram className="w-6 h-6" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div
+        {/* <div
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
           data-aos="fade-up"
           data-aos-delay="700"
         >
           <ArrowDown className="w-6 h-6 text-white" />
-        </div>
+        </div> */}
       </section>
 
       {/* Floating Navigation Dock */}
@@ -148,6 +154,8 @@ export default function Hero() {
           </MemoizedDockIcon>
         </Dock>
       </div>
+         
+
     </>
   );
 }
