@@ -15,7 +15,7 @@ const MemoizedDockIcon = memo(DockIcon);
 export default function Hero() {
   return (
     <>
-      <div className="w-screen h-screen overflow-hidden">
+      <div className="w-screen h-screen overflow-hidden" id="home">
   <div className="w-full h-full flex items-center justify-center transform scale-115">
     <Spline 
       scene="https://prod.spline.design/T9EAObpUV5XWRE-b/scene.splinecode" 
