@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <Hero />
+      
       <HeroHighlightDemo />
       <Suspense fallback={<LoadingSpinner />}>
         <About />
