@@ -9,7 +9,8 @@ import {
 } from "lucide-react";
 import { memo } from "react";
 
-// Memoize the DockIcon component to prevent unnecessary re-renders
+//prevent unnecessary re-renders
+
 const MemoizedDockIcon = memo(DockIcon);
 
 export default function Hero() {
