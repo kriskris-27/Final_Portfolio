@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import Hero from "./components/Hero";
 import LoadingSpinner from "./components/ui/LoadingSpinner";
 import { HeroHighlightDemo } from "./ui-comp/herohigh";
-
+import { Analytics } from "@vercel/analytics/react"
 // Lazy load heavy components
 const About = lazy(() => import("./components/About"));
 const Skills = lazy(() => import("./components/Skills"));
@@ -27,6 +27,7 @@ function App() {
       <Suspense fallback={<LoadingSpinner />}>
         <Contact />
       </Suspense>
+      <Analytics />
     </>
   );
 }
